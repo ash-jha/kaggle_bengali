@@ -6,6 +6,7 @@ My team's solution to Kaggle's Bengali.AI Handwritten Grapheme Classification Co
 We placed in the Top 10% of competitors by using a seresnext-50 architechture with cutmix/mixup loss that achieved a 0.9315 weighted recall score on the public leaderboard.
 
 Team Members:
-Ash Jha
+
+Ash Jha - https://github.com/ashjha
 
 Shrikar Thodla - https://github.com/sthodla
