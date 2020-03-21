@@ -197,29 +197,30 @@ train_dataset = bengali(root='.',
                                            OneOf([Cutout(num_holes=1, p=0.5, max_h_size=100, max_w_size=100),
                                                   GridMask(num_grid=3, rotate=10, mode=0, p=0.8),
                                                   GridMask(num_grid=3, rotate=10, mode=2, p=0.5)], p=1)]))
+
 trainacc_dataset = bengali(root='.',
                            subset='train',
                            transform=Compose([Resize(new_size,new_size)]))
+
 val_dataset = bengali(root='.',
                       subset='val',
                       transform=Compose([Resize(new_size,new_size)]))
-
 trainacc_dataset, throwaway = torch.utils.data.random_split(trainacc_dataset, (len(val_dataset), len(trainacc_dataset)-len(val_dataset)))
 
-train_loader = torch.utils.data.DataLoader(dataset=train_dataset,
-                                           batch_size=batch_size,
-                                           shuffle=True,
-                                           num_workers=4)
+train_loader = DataLoader(dataset=train_dataset,
+                          batch_size=batch_size,
+                          shuffle=True,
+                          num_workers=4)
 
-val_loader = torch.utils.data.DataLoader(dataset=val_dataset,
-                                         batch_size=batch_size,
-                                         shuffle=True,
-                                         num_workers=4)
+val_loader = DataLoader(dataset=val_dataset,
+                        batch_size=batch_size,
+                        shuffle=True,
+                        num_workers=4)
 
-trainacc_loader = torch.utils.data.DataLoader(dataset=trainacc_dataset,
-                                              batch_size=batch_size,
-                                              shuffle=True,
-                                              num_workers=4)
+trainacc_loader = DataLoader(dataset=trainacc_dataset,
+                             batch_size=batch_size,
+                             shuffle=True,
+                             num_workers=4)
 
 class Identity(nn.Module):
     def __init__(self):
