@@ -7,4 +7,5 @@ We placed in the Top 10% of competitors by using a seresnext-50 architechture wi
 
 Team Members:
 Ash Jha
-Shrikar Thodla 
+
+Shrikar Thodla - https://github.com/sthodla
