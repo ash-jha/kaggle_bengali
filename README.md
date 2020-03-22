@@ -7,6 +7,6 @@ My team's solution to Kaggle's Bengali.AI Handwritten Grapheme Classification Co
 
 Team Members:
 
-Ash Jha - https://github.com/ashjha
+Ash Jha - https://github.com/ash-jha
 
 Shrikar Thodla - https://github.com/sthodla
